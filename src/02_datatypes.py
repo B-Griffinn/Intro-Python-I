@@ -14,8 +14,10 @@ y = "7"
 # Write a print statement that combines x + y into the integer value 12
 
 # YOUR CODE HERE
+print('I am x + y in int form: ', x + int(y))
 
 
 # Write a print statement that combines x + y into the string value 57
 
 # YOUR CODE HERE
+print('I am x + y in string concat form: ', str(x) + y)
