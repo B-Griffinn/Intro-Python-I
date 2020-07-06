@@ -2,7 +2,6 @@
 The Python standard library's 'calendar' module allows you to
 render a calendar to your terminal.
 https://docs.python.org/3.6/library/calendar.html
-
 Write a program that accepts user input of the form
   `14_cal.py [month] [year]`
 and does the following:
@@ -17,51 +16,14 @@ and does the following:
  - Otherwise, print a usage statement to the terminal indicating
    the format that your program expects arguments to be given.
    Then exit the program.
-
-Note: the user should provide argument input (in the initial call to run the file) and not
+Note: the user should provide argument input (in the initial call to run the file) and not 
 prompted input. Also, the brackets around year are to denote that the argument is
 optional, as this is a common convention in documentation.
-
-This would mean that from the command line you would call `python3 14_cal.py 4 2015` to
-print out a calendar for April in 2015, but if you omit either the year or both values,
+This would mean that from the command line you would call `python3 14_cal.py 4 2015` to 
+print out a calendar for April in 2015, but if you omit either the year or both values, 
 it should use today’s date to get the month and year.
 """
 
 import sys
 import calendar
 from datetime import datetime
-
-user_input = sys.argv
-today = datetime.today()
-# print(month, year)
-
-if len(user_input) == 1 and user_input is int:
-    print(calendar.month(today.year, today.month))
-elif len(user_input) == 2 and user_input is int:
-    print(calendar.month(today.year, int(user_input[1])))
-elif len(user_input) == 3 and user_input is int:
-    print(calendar.month(int(user_input[2]), int(user_input[1])))
-else:
-    print("\n***Please input the correct Month (MM) and Year (YYYY) format, separated with spaces.***\n")
-
-
-# today = datetime.today()
-# print(today)
-
-# user_input = sys.argv
-# # print(user_input)
-
-
-# def print_cal(inp):
-#     if len(inp) == 1:
-#         print(calendar.month(today.year, today.month))
-#     elif len(inp) == 2:
-#         # print("sicc", inp[1])
-#         print(calendar.month(today.year, int(inp[1])))
-#     elif len(inp) >= 3:
-#         print(calendar.month(int(inp[2]), int(inp[1])))
-#     else:
-#         print("NO")
-
-
-# print_cal(user_input)
